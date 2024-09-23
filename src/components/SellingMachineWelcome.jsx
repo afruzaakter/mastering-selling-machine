@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import RegistrationForm from "./RegistrationForm";
 
 const SellingMachineWelcome = () => {
+  const navigate = useNavigate();
+
+  const handleJoinWebinar = () => {
+    navigate("/live");
+  };
+
   return (
     <div className="lg:m-12 lg:ml-16 lg:mr-12 m-4   lg:flex lg:justify-center lg:items-center">
       <div>
@@ -23,6 +30,16 @@ const SellingMachineWelcome = () => {
 
           <div>
             <RegistrationForm />
+          </div>
+
+          <div className="flex flex-col justify-center items-center h-screen">
+            <h1 className="text-4xl font-bold mb-4">Welcome to the Webinar</h1>
+            <button
+              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+              onClick={handleJoinWebinar}
+            >
+              Join Webinar
+            </button>
           </div>
         </div>
         <p className="lg:text-3xl md:text-3xl text-2xl text-red-500 text-center p-14 lg:pr-16 lg:pl-16">

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import MasteringSellingMachineCongratulations from "./components/MasteringSellingMachineCongratulations";
 import SellingMachineWelcome from "./components/SellingMachineWelcome";
 import WebinarVideo from "./components/WebinarVideo";
+import LiveVideoPlayer from "./components/LiveVideoPlayer";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
           element={<MasteringSellingMachineCongratulations />}
         />
         <Route path="/webiner" element={<WebinarVideo />} />
+        {/* razu molla  */}
+        <Route path="/live" element={<LiveVideoPlayer />} />
       </Routes>
     </div>
   );

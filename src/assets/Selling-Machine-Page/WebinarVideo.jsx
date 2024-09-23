@@ -9,7 +9,7 @@ const WebinarVideo = () => {
             <iframe
                 width="1200"
                 height="700"
-                src="https://www.youtube.com/embed/BImFWxvAjDc?autoplay=1&controls=0&loop&disablekb=1"
+                src="https://www.youtube.com/embed/BImFWxvAjDc?autoplay=1&controls=0&loop=1&disablekb=1"
                 title="ওয়েবিনার এ রেজিঃ করার জন্য অভিনন্দন জানাই"
                 allow="accelerometer; autoplay=1; controls; disablekb=1; loop=1; modestbranding=1  "
                 allowfullscreen

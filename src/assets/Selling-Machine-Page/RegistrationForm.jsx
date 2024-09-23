@@ -9,7 +9,10 @@ const RegistrationForm = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log("hoyeche")
+        console.log(e.target.name.value);
+        console.log(e.target.phoneNumber.value);
+        console.log(e.target.email.value);
+        console.log(e.target.profession.value);
     };
 
     return (
@@ -32,25 +35,25 @@ const RegistrationForm = () => {
                         {/* --------------- Name field ------------- */}
                         <label className="input input-bordered flex items-center gap-2">
                             <FaUserTie />
-                            <input type="text" className="grow" placeholder="Your Name" />
+                            <input type="text" name="name" className="grow" placeholder="Your Name" />
                         </label>
                         {/* --------------- Phone number field ------------- */}
                         <label className="input input-bordered flex items-center gap-2">
                             <FaPhoneVolume />
-                            <input type="text" className="grow" placeholder="Your Phone Number" />
+                            <input type="text" name="phoneNumber" className="grow" placeholder="Your Phone Number" />
                         </label>
 
 
                         {/* --------------- Email field ------------- */}
                         <label className="input input-bordered flex items-center gap-2">
                             <MdEmail />
-                            <input type="email" className="grow" placeholder="Your Email" />
+                            <input type="email" name="email" className="grow" placeholder="Your Email" />
                         </label>
 
                         {/* ------------- Select field-------------------------- */}
                         <label className="input  input-bordered  flex items-center gap-4">
                             <GiGraduateCap />
-                            <select className="select w-full  ">
+                            <select name="profession" className="select w-full  ">
                                 <option disabled selected>Select Your Profession</option>
                                 <option>Sales Professional</option>
                                 <option>উদ্যোক্তা</option>

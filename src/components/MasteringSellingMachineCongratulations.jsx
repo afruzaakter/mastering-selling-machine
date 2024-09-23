@@ -6,7 +6,7 @@ const MasteringSellingMachineCongratulations = () => {
 
     <div className="lg:m-12 lg:ml-16 lg:mr-12 m-4 flex flex-col lg:justify-center lg:items-center  p-8">
       <h1 className="text-4xl lg:text-5xl font-semibold mb-8 mt-8 font-serif text-center">
-        Congratulations... you've been registered!
+        Congratulations... you&apos;ve been registered!
       </h1>
       <p className="text-lg lg:text-2xl mb-8 lg:text-center text-justify">
         অভিনন্দন জানাই আপনাকে সেশনটি থেকে সর্বোচ্চ সুবিধা নেওয়ার জন্য নিরিবিলি

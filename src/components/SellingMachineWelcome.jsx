@@ -9,8 +9,6 @@ const SellingMachineWelcome = () => {
           ব্যবসার সেলস্‌ বিষয়ক দুশ্চিন্তা মুক্ত হোন ।
         </h2>
         <div className="lg:flex justify-center   mb-14 lg:items-center  lg:gap-20  ">
-          {/* // video should play automatically and video dont can be clickable   */}
-
           <div className="flex items-center">
             <iframe
               className="border-2 border-spacing-3 rounded-md border-red-500 "

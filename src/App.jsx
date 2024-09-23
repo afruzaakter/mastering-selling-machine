@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import MasteringSellingMachineCongratulations from "./assets/Selling-Machine-Page/MasteringSellingMachineCongratulations";
-import SellingMachineWelcome from "./assets/Selling-Machine-Page/SellingMachineWelcome";
-import WebinarVideo from "./assets/Selling-Machine-Page/WebinarVideo";
+import MasteringSellingMachineCongratulations from "./components/MasteringSellingMachineCongratulations";
+import SellingMachineWelcome from "./components/SellingMachineWelcome";
+import WebinarVideo from "./components/WebinarVideo";
 
 function App() {
   return (

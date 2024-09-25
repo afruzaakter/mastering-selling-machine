@@ -3,16 +3,45 @@ import { FaUserTie, FaPhoneVolume } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { GiGraduateCap } from "react-icons/gi";
 import Timer from './Timer';
+import { useEffect, useState } from 'react';
 
 
 const RegistrationForm = () => {
+    const[users, setUsers] = useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/users')
+        .then(res => res.json())
+        .then(data => setUsers(data));
+    }, []);
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(e.target.name.value);
-        console.log(e.target.phoneNumber.value);
-        console.log(e.target.email.value);
-        console.log(e.target.profession.value);
+        const form = e.target;
+        const name =form.name.value;
+        const phoneNumber =(form.phoneNumber.value);
+        const email =form.email.value;
+        const profession =form.profession.value;
+        const user = {name, phoneNumber, email, profession};
+        console.log(user);
+
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('inside post response', data);
+            const newUser = [...users, data];
+            setUsers(newUser);
+            form.reset();
+        })
+
+
     };
 
     return (
@@ -22,7 +51,8 @@ const RegistrationForm = () => {
 
                 <div className="card-body lg:items-center lg:text-center">
                     <h2 className="lg:text-3xl text-2xl font-bold text-gray-600 ">Join our Free Webinar</h2>
-                    <p className=" [font-size:18px] lg:mr-10 lg:ml-10">Join our free webinar to learn how to get the best out of your online marketing efforts</p>
+                    
+                    <p className=" [font-size:18px] lg:mr-10 lg:ml-10">Join our free webinar to learn how to get the best out of your online marketing efforts.</p>
                     {/* -------------- Timer  Code start -------------- */}
 
                     <Timer />
@@ -62,7 +92,8 @@ const RegistrationForm = () => {
                             </select>
                         </label>
                         <label className="input  flex items-center gap-2">
-                            <button className=" btn text-white btn-wide  bg-blue-800  ">Register</button>
+                            <button  value="Add User" className=" btn text-white btn-wide  bg-blue-800  ">Register</button>
+                            
                         </label>
                     </form>
 

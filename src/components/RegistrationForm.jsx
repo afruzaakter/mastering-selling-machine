@@ -2,8 +2,11 @@ import { FaUserTie, FaPhoneVolume } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { GiGraduateCap } from "react-icons/gi";
 import Timer from "./Timer";
+// import { useNavigate } from "react-router-dom";
 
 const RegistrationForm = () => {
+  // const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.name.value);
@@ -11,6 +14,12 @@ const RegistrationForm = () => {
     console.log(e.target.email.value);
     console.log(e.target.profession.value);
   };
+
+
+
+  // const handelCongratulations = () => {
+  //   navigate("/msm-congratulations");
+  // };
 
   return (
     <>
@@ -79,6 +88,9 @@ const RegistrationForm = () => {
               </select>
             </label>
             <label className="input  flex items-center gap-2">
+              {/* <button onClick={handelCongratulations} className=" btn text-white btn-wide  bg-blue-800  ">
+                Register
+              </button> */}
               <button className=" btn text-white btn-wide  bg-blue-800  ">
                 Register
               </button>

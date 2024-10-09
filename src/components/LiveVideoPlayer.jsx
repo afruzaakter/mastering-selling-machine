@@ -6,7 +6,7 @@ const YouTubePlayer = () => {
 
   const playerRef = useRef(null);
   const STORAGE_KEY = `youtube_video_${videoId}_time`;
-  const STORAGE_EXPIRATION_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+  const STORAGE_EXPIRATION_MS = 7 * 24 * 60 * 60 * 1000;  // 7 days
   const [isMuted, setIsMuted] = useState(true);
 
   // Function to save the current playback time to localStorage
@@ -162,20 +162,22 @@ const YouTubePlayer = () => {
       </div>
 
       {/* Enable Sound Button */}
-      {isMuted && (
-        <button
-          className="bg-green-500  text-white font-bold py-2 px-4 mx-auto rounded"
-          onClick={enableSound}
-          style={{
-            marginTop: "20px",
-            padding: "10px 20px",
-            fontSize: "16px",
-            cursor: "pointer",
-          }}
-        >
-          Enable Sound
-        </button>
-      )}
+        {isMuted && (
+          <button
+            className="bg-green-500  text-white font-bold py-2 px-4 mx-auto rounded"
+            onClick={enableSound}
+            style={{
+              marginTop: "20px",
+              padding: "10px 20px",
+              fontSize: "16px",
+              cursor: "pointer",
+            }}
+          >
+            Enable Sound
+          </button>
+        )}
+
+
     </>
   );
 };
